@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  text-align: right;
+  padding: 0 10px;
+  font-size: 2rem;
+  background-color: #222;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.display:disabled {
+  opacity: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  width: 100px;
+  border: none;
+
+  background-color: #eaeaea;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+button[data-value="="] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button[data-value="="]:hover {
+  background-color: #0056b3;
+}
+
+button[data-value="AC"],
+button[data-value="DEL"],
+button[data-value="%"],
+button[data-value="/"],
+button[data-value="*"],
+button[data-value="-"],
+button[data-value="+"],
+button[data-value="="] {
+  background-color: orange;
+  color: #fff;
+}
+
+button[data-value="AC"]:hover,
+button[data-value="DEL"]:hover,
+button[data-value="%"]:hover,
+button[data-value="/"]:hover,
+button[data-value="*"]:hover,
+button[data-value="-"]:hover,
+button[data-value="+"]:hover,
+button[data-value="="]:hover {
+  background-color: rgb(225, 147, 2);
+}
